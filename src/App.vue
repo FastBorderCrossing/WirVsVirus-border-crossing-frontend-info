@@ -1,0 +1,23 @@
+<template>
+  <div id="app">
+    <div id="logo">
+      <img alt="Logo" src="./assets/logo.png" width="250">
+    </div>
+    <router-view></router-view>
+  </div>
+</template>
+
+<script>
+
+  export default {
+    name: 'App',
+  }
+</script>
+
+<style>
+  #logo {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+</style>
