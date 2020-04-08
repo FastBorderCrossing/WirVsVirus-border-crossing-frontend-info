@@ -4,8 +4,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-                        <h1 data-aos="fade-up">{{ $t('homeTitle') }}</h1>
-                        <h2 data-aos="fade-up" data-aos-delay="400">{{ $t('homeParagraph1') }}</h2>
+                        <h1 v-html="$t('homeTitle')"></h1>
+                        <h2 v-html="$t('homeParagraph1')"></h2>
                     </div>
                     <div class="col-lg-6 order-1 order-lg-2 hero-img">
                         <!--  img src="assets/img/hero-img.png" class="img-fluid animated" alt="" -->
