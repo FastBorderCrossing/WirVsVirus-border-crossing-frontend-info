@@ -3,7 +3,7 @@
         <section id="about" class="about section-bg">
             <div class="container">
                 <div class="section-title" data-aos="fade-up">
-                    <h2>{{ $t('aboutTile') }}</h2>
+                    <h2>{{ $t('aboutTitle') }}</h2>
                 </div>
                 <div class="row content">
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">

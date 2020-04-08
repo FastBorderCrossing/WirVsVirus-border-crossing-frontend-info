@@ -1,7 +1,7 @@
 {
     "aboutTitle": "Über uns",
-    "aboutParagraph1": "Unser Team hat sich erst im Zuge des deutschen Hackathon <i>#wirvsvirus</i> gegründet. Alle Mitglieder des Teams kannten sich bis dahin noch nicht! Gemeinsam sind wir die folgende von der Bundesregierung, bzw. der Bundespolizei gestellten Herausforderung angegangen:",
-    "aboutParagraph2": "Seit der Corona-Krise kommt es durch intensivere Grenzkontrollen an den Grenzübergangen zu lange LKW-Staus von bis zu 60 KM. Diese führen zu langen Wartezeiten, welche zu Unterbrechungen von wichtigen Lieferketten, z.B. bei Lebensmitteln und wichtigen medizinischen Produkten, führen. Wie kann man die Staus an den Grenzübergangen vermeiden, bzw. wenigstens verkürzen?",
+    "aboutParagraph1": "Unser Team hat sich erst im Zuge des deutschen Hackathon <i>#wirvsvirus</i> gegründet. Alle Mitglieder des Teams kannten sich bis dahin noch nicht! Gemeinsam sind wir die folgende, von der Bundesregierung bzw. der Bundespolizei gestellte Herausforderung angegangen:",
+    "aboutParagraph2": "Seit der Corona-Krise kommt es durch intensivere Grenzkontrollen an den Grenzübergangen zu langen LKW-Staus von bis zu 60 KM. Diese führen zu langen Wartezeiten, welche zu Unterbrechungen von wichtigen Lieferketten, z.B. bei Lebensmitteln und wichtigen medizinischen Produkten, führen. Wie kann man die Staus an den Grenzübergangen vermeiden, bzw. wenigstens verkürzen?",
     "aboutParagraph3": "Unser beim Hackathon entwickelter Prototyp <b>Fast&nbsp;Border&nbsp;Crossing</b>, der sich auf den gewerblichen Güterverkehr konzentriert, wurde beim deutschen Hackathon <i>#wirvsvirus</i> in die Top20 aller 1500 eingereichten Lösungen aufgenommen. Diese Auszeichnung bestärkt und motiviert uns <b>Fast&nbsp;Border&nbsp;Crossing</b> weiter voran zu treiben.",
     "architectureTitle": "Architektur",
     "architectureParagraph1": "Mit der von uns gewählten Architektur, und der daraus resultierenden Applikationslandschaft, ergeben sich folgende Benefits für alle Beteiligten:",
@@ -20,7 +20,7 @@
     "homeParagraph1": "Mit der Nutzung von <b>Fast&nbsp;Border&nbsp;Crossing</b> helfen Sie aktiv bei der Sicherstellung eines freien, europaweiten Waren- und Güterverkehrs bei gleichzeitiger Eindämmung der Corona-Pandemie mit.",
     "notFound": "Die angeforderte Seite wurde nicht gefunden",
     "solutionTitle": "Unsere Lösung",
-    "solutionParagraph1": "fastbordercrossing.org schafft eine EU-weite Plattform, über welche die bisher analog über einen Fragebogen erfassten Informationen digital und vor Fahrtantritt eingeben werden können. Die Informationen für eine komplette Fahrt - vom Startland, über Transitländer bis hin zum Zielland - werden zentral in einer Datenbank erfasst und können von Grenzbeamten per QR-Code aufgerufen und kontrolliert werden. Neben den Informationen zum Fahrer, Fahrzeug und Fahrt, können zudem gesundheitsrelevante Daten erfasst werden.",
+    "solutionParagraph1": "fastbordercrossing.org schafft eine EU-weite Plattform, über welche die bisher analog über einen Fragebogen erfassten Informationen digital und vor Fahrtantritt eingegeben werden können. Die Informationen für eine komplette Fahrt - vom Startland, über Transitländer bis hin zum Zielland - werden zentral in einer Datenbank erfasst und können von Grenzbeamten per QR-Code aufgerufen und kontrolliert werden. Neben Informationen zu Fahrer, Fahrzeug und Fahrt, können zudem gesundheitsrelevante Daten erfasst werden.",
     "driverAppTitle": "Fahrer App",
     "checkpointAppTitle": "Checkpoint App",
     "teamTitle": "Team",
