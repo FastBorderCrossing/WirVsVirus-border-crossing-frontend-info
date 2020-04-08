@@ -10,6 +10,7 @@
           </h1>
            -->
           <a href="/"><img src="./assets/fastborderx_logo_mit_text.svg" height="50" alt="" ></a>
+
         </div>
         <button @click="toggleMobileNav()" v-if="!mobileNav" type="button" class="mobile-nav-toggle d-lg-none">
           <i class="fas fa-bars"></i>
@@ -49,7 +50,7 @@
         </div>
       </div>
     </footer>
-    <a href="#" class="back-to-top"><i class="fas fa-angle-up"></i></a>
+    <a v-scroll-to="{ el: '#header'}" v-if="windowTop > 60" class="back-to-top cursor-pointer"><i class="fas fa-angle-up fa-lg"></i></a>
      <button @click="toggleMobileNav()" v-if="mobileNav" class="mobile-nav-toggle" type="button">
           <i class="fas fa-times text-white"></i>
       </button>
@@ -69,15 +70,25 @@
     },
     data () {
         return { 
-            mobileNav: false
+            mobileNav: false,
+            windowTop: 0
           }
       },
+    mounted() {
+      window.addEventListener("scroll", this.onScroll)
+    },
+    beforeDestroy() {
+      window.removeEventListener("scroll", this.onScroll)
+    },
     methods: {
       toggleMobileNav: function() {
         this.mobileNav = !this.mobileNav;
       },
       closeMobileNav: function() {
         this.mobileNav = false;
+      },
+      onScroll() {
+        this.windowTop = window.top.scrollY /* or: e.target.documentElement.scrollTop */
       }
     }
   }
@@ -85,4 +96,7 @@
 
 <style>
   @import './assets/css/main.css';
+  .cursor-pointer {
+    cursor: pointer;
+  }
 </style>

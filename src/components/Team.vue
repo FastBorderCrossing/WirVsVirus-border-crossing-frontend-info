@@ -28,7 +28,7 @@
     export default {
         name: "Team",
         data () {
-            return { 
+            return {
                 team: [
                     {
                     'name':'André Sünnemann',
