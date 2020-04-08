@@ -3,8 +3,8 @@
         <section id="team" class="team">
             <div class="container">
                 <div class="section-title" data-aos="fade-up">
-                    <h2>{{ $t('teamTitle') }}</h2>
-                    <p>{{ $t('teamParagraph1') }}</p>
+                    <h2 v-html="$t('teamTitle')"></h2>
+                    <p v-html="$t('teamParagraph1')"></p>
                 </div>
                 <div class="row">
                     <div class="col-lg-3 col-md-6 d-flex align-items-stretch" v-for="member in team" :key="member.name">
