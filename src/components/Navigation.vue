@@ -6,7 +6,7 @@
             <li @click="$emit('clicked')"><a class="cursor-pointer" v-scroll-to="{ el: '#architektur', offset: -40 }">{{ $t('architectureTitle') }}</a></li>
             <li class="dropdown"><a class="cursor-pointer dropdown-toggle" data-toggle="dropdown">{{ $t('applicationTitle') }}</a>
               <ul class="dropdown-menu">
-                <li class="dropdown-item"><a target="_blank" href="https://www.fastbordercrossing.org">{{ $t('driverAppTitle') }}</a></li>
+                <li class="dropdown-item"><a target="_blank" href="https://driver.fastbordercrossing.org">{{ $t('driverAppTitle') }}</a></li>
                 <li class="dropdown-item"><a target="_blank" href="https://checkpoint.fastbordercrossing.org">{{ $t('checkpointAppTitle') }}</a></li>
               </ul>
             </li>

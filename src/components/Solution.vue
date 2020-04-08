@@ -12,10 +12,10 @@
                     </div>
                     <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left" data-aos-delay="200">
                         <div data-aos="fade-up" data-aos-delay="800">
-                            <a href="#portfolio" class="btn-get-started scrollto" v-html="$t('driverAppTitle')"></a>
+                            <a href="https://driver.fastbordercrossing.org" class="btn-get-started scrollto" v-html="$t('driverAppTitle')"></a>
                         </div>
                         <div data-aos="fade-up" data-aos-delay="800">
-                            <a href="#portfolio" class="btn-get-started scrollto" v-html="$t('checkpointAppTitle')"></a>
+                            <a href="https://checkpoint.fastbordercrossing.org" class="btn-get-started scrollto" v-html="$t('checkpointAppTitle')"></a>
                         </div>
                     </div>
                 </div>
