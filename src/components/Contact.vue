@@ -12,7 +12,6 @@
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
                         <div class="contact-about">
                             <h3>Allgemein</h3>
-                            <p>Guten Tag,</p>
                             <p>Sie können mit uns per Email in Kontakt treten. Bitte senden Sie Ihre Anfragen an untenstehende Email-Adresse</p>
                             <div class="social-links">
                                 <i>info(AT)fastbordercrossing.org</i>
@@ -23,7 +22,6 @@
                          data-aos-delay="300">
                         <div class="contact-about">
                             <h3>Presse</h3>
-                            <p>Guten Tag,</p>
                             <p>Sie können mit uns per Email in Kontakt treten. Bitte senden Sie Ihre Presse-Anfragen an untenstehende Email-Adresse</p>
                             <div class="social-links">
                                 <i>presse(AT)fastbordercrossing.org</i>
