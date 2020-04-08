@@ -9,7 +9,7 @@
                         <h2 data-aos="fade-up" data-aos-delay="400">Mit der Nutzung
                             von <b>Fast&nbsp;Border&nbsp;Crossing</b> helfen Sie aktiv bei der
 
-                            Sicherstellung eines freien, europaweiten Waren- und Güterverkehrs bei gleichzeitiger Eindämmung der Corona-Pandemie mit.</h2>
+                            Sicherstellung eines freien, europaweiten Waren- und Güterverkehrs bei gleichzeitiger Eindämmung der Corona-Pandemie {{ $t('with') }}.</h2>
 
                     </div>
                     <div class="col-lg-6 order-1 order-lg-2 hero-img">

@@ -14,7 +14,7 @@
 
                     <div class="col-lg-6 order-1 order-lg-2 hero-img"
                          data-aos="fade-left" data-aos-delay="200">
-                        <img src="assets/img/portfolio/Architektur.jpg"
+                        <img src="@/assets/img/Architektur.jpg"
                              class="img-fluid animated" alt="">
                     </div>
 

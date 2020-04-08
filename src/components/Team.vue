@@ -3,9 +3,9 @@
         <section id="team" class="team">
             <div class="container">
 
-                <div class="section-title" data-aos="fade-up">
+                <div class="section-title">
                     <h2>Team</h2>
-                    <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem</p>
+                    <p>Wir stehen hinter Fast Border Crossing</p>
                 </div>
 
                 <div class="row">

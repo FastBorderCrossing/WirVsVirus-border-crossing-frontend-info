@@ -14,15 +14,21 @@
             <li @click="$emit('clicked')"><a class="cursor-pointer" v-scroll-to="{ el: '#team', offset: -40 }">Team</a></li>
             <li @click="$emit('clicked')"><a class="cursor-pointer" v-scroll-to="{ el: '#contact', offset: -40 }">Kontakt 
             </a></li>
+            <li>
+            <LanguageSwitcher></LanguageSwitcher>
+            </li>
           </ul>
 
 </template>
 
 
 <script>
-
+import LanguageSwitcher from './LanguageSwitcher.vue'
   export default {
-    name: 'Navigation'
+    name: 'Navigation',
+    components: {
+      LanguageSwitcher
+    }
   }
 </script>
 
