@@ -34,9 +34,8 @@
                             weiter voran zu treiben.
                         </p>
                     </div>
-                    <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up"
-                         data-aos-delay="300">
-                        <img src="assets/img/counts-img.svg" alt="" class="img-fluid">
+                    <div class="col-lg-6 pt-4 pt-lg-0">
+                        <img src="@/assets/img/winners.svg" alt="" class="img-fluid">
 
                     </div>
                 </div>

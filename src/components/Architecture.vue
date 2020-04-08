@@ -37,8 +37,6 @@
                             <li><i class="ri-check-double-line"></i> Weiterverarbeitung
                                 der Daten und Analysemöglichkeiten</li>
                         </ul>
-                        <a href="#" class="btn-learn-more">Learn More</a>
-
                     </div>
                 </div>
             </div>

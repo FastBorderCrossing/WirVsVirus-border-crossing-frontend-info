@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <header id="header" class="fixed-top d-flex align-items-center">
+    <header id="header" class="fixed-top d-flex align-items-center bg-white">
       <div class="container d-flex align-items-center">
 
         <div class="logo mr-auto">
@@ -9,24 +9,13 @@
               <a href="index.html"><span>Fast&nbsp;Border&nbsp;Crossing</span></a>
           </h1>
            -->
-          <a href="index.html"><img src="./assets/bc-logo.svg" alt="" class="img-fluid"></a>
+          <a href="index.html"><img src="./assets/fastborderx_logo_mit_text.svg" height="50" alt="" ></a>
         </div>
-
+        <button @click="toggleMobileNav()" v-if="!mobileNav" type="button" class="mobile-nav-toggle d-lg-none">
+          <i class="fas fa-bars"></i>
+        </button>
         <nav class="nav-menu d-none d-lg-block">
-          <ul>
-            <li class="active"><a href="#header">Home</a></li>
-            <li><a href="#about">Über&nbsp;uns</a></li>
-            <li><a href="#loesung">Unsere&nbsp;Lösung</a></li>
-            <li><a href="#architektur">Architektur</a></li>
-            <li class="drop-down"><a href="">Anwendungen</a>
-              <ul>
-                <li><a target="_blank" href="https://www.fastbordercrossing.org">Fahrer-Frontend</a></li>
-                <li><a target="_blank" href="https://checkpoint.fastbordercrossing.org">Checkpoint-Frontend</a></li>
-              </ul>
-            </li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="#contact">Kontakt</a></li>
-          </ul>
+        <Navigation @clicked="closeMobileNav()" v-if="!mobileNav"></Navigation>
         </nav>
       </div>
     </header>
@@ -60,14 +49,37 @@
         </div>
       </div>
     </footer>
-    <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+    <a href="#" class="back-to-top"><i class="fas fa-angle-up"></i></a>
+     <button @click="toggleMobileNav()" v-if="mobileNav" class="mobile-nav-toggle" type="button">
+          <i class="fas fa-times text-white"></i>
+      </button>
+    <nav v-if="mobileNav" class="mobile-nav d-lg-none">
+      <Navigation @clicked="closeMobileNav()"></Navigation>
+    </nav>
+    <div class="mobile-nav-overly" v-if="mobileNav"></div>
   </div>
 </template>
 
 <script>
-
+  import Navigation from "./components/Navigation";
   export default {
     name: 'App',
+    components: {
+      Navigation
+    },
+    data () {
+        return { 
+            mobileNav: false
+          }
+      },
+    methods: {
+      toggleMobileNav: function() {
+        this.mobileNav = !this.mobileNav;
+      },
+      closeMobileNav: function() {
+        this.mobileNav = false;
+      }
+    }
   }
 </script>
 

@@ -6,7 +6,7 @@
 
                 <div class="section-title" data-aos="fade-up">
                     <h2>Unsere&nbsp;Lösung</h2>
-                    <p><img src="assets/img/fastborderX.jpg" alt="" class="img-fluid"></p>
+                    <p><img src="@/assets/fastborderx_logo_mit_text.svg" alt="" width="600" class="img-fluid"></p>
 
                 </div>
 
