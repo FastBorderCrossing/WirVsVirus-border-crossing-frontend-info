@@ -57,7 +57,7 @@
                     },
                     {
                     'name':'Michael Siebers',
-                    'role':'Product Lead',
+                    'role':'Project Lead',
                     'img':'team.jpg',
                     },
                     {
