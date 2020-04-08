@@ -1,5 +1,5 @@
 <template>
-    <h1> The Requested Page Was Not Found</h1>
+    <h1>{{ $t('notFound') }}</h1>
 </template>
 
 <script>

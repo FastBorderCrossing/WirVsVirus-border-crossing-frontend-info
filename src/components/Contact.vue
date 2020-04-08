@@ -2,31 +2,28 @@
     <div>
         <section id="contact" class="contact">
             <div class="container">
-
                 <div class="section-title" data-aos="fade-up">
-                    <h2>Kontakt</h2>
+                    <h2>{{ $t('contactTitle') }}</h2>
                 </div>
-
-
                 <div class="row content">
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
                         <div class="contact-about">
-                            <h3>Allgemein</h3>
-                            <p>Sie können mit uns per Email in Kontakt treten. Bitte senden Sie Ihre Anfragen an untenstehende Email-Adresse</p>
+                            <h3>{{ $t('contactGeneralTitle') }}</h3>
+                            <p>{{ $t('contactGeneralParagraph1') }}</p>
                             <div class="social-links">
-                                <i>info(AT)fastbordercrossing.org</i>
+                                <i>{{ $t('infoEmail') }}</i>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up"
                          data-aos-delay="300">
                         <div class="contact-about">
-                            <h3>Presse</h3>
-                            <p>Sie können mit uns per Email in Kontakt treten. Bitte senden Sie Ihre Presse-Anfragen an untenstehende Email-Adresse</p>
+                            <h3>{{ $t('contactPressTitle') }}</h3>
+                            <p>{{ $t('contactPressParagraph1') }}</p>
                             <div class="social-links">
-                                <i>presse(AT)fastbordercrossing.org</i>
+                                <i>{{ $t('pressEmail') }}</i>
                             </div>
-                            <p>Haben Sie bitte Verständnis dafür, dass anderweitige Anfrage über diesen Kanal nicht beantwortet werden können. Für alle anderen Anfragen verwenden Sie bitte allgemeine Email-Addresse.</p>
+                            <p>{{ $t('contactPressParagraph2') }}</p>
                         </div>
                     </div>
                 </div>
