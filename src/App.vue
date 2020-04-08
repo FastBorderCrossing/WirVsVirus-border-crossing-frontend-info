@@ -9,7 +9,7 @@
               <a href="index.html"><span>Fast&nbsp;Border&nbsp;Crossing</span></a>
           </h1>
            -->
-          <a href="index.html"><img src="./assets/fastborderx_logo_mit_text.svg" height="50" alt="" ></a>
+          <a href="/"><img src="./assets/fastborderx_logo_mit_text.svg" height="50" alt="" ></a>
         </div>
         <button @click="toggleMobileNav()" v-if="!mobileNav" type="button" class="mobile-nav-toggle d-lg-none">
           <i class="fas fa-bars"></i>
