@@ -24,16 +24,16 @@ export default {
             'lang': 'en', 
             'flag': require('../assets/flags/en.svg')
             },
-            // {
-            // 'label': 'español',
-            // 'lang': 'es', 
-            // 'flag': require('../assets/flags/es.svg')
-            // },
-            // {
-            // 'label': 'français',
-            // 'lang': 'fr', 
-            // 'flag': require('../assets/flags/fr.svg')
-            // }
+            {
+            'label': 'español',
+            'lang': 'es', 
+            'flag': require('../assets/flags/es.svg')
+            },
+            {
+            'label': 'français',
+            'lang': 'fr', 
+            'flag': require('../assets/flags/fr.svg')
+            }
             ]
         }
   },
