@@ -1,6 +1,6 @@
 <template>
-    <li class="dropdown"><a class="cursor-pointer dropdown-toggle" data-toggle="dropdown"><img width="12" :src="getLangFlag()" /> {{activeLang}}</a>
-      <ul class="dropdown-menu">
+    <li class="dropdown" @click.prevent="showChildren = !showChildren"><a class="cursor-pointer dropdown-toggle nav-link" data-toggle="dropdown"><img width="12" :src="getLangFlag()" /> {{activeLang}}</a>
+      <ul class="dropdown-menu d-block" v-if="showChildren">
         <li @click="changeLang(lang.lang)" class="dropdown-item cursor-pointer" v-for="(lang, i) in langs" :key="`Lang${i}`"><a><img :src="lang.flag" width="12" /> {{lang.label}}</a></li>
       </ul>
     </li>
@@ -12,6 +12,7 @@ export default {
   name: 'locale-changer',
   data () {
     return { 
+        showChildren: false,
         activeLang: this.$i18n.locale,
         langs: [
             {

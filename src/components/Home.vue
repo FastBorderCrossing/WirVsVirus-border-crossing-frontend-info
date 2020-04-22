@@ -1,46 +1,77 @@
 <template>
     <div>
-        <section id="hero" class="portfolio">
+        <section id="hero">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+                    <div class="col-sm-12 col-md-6 col-lg-6 d-flex flex-column justify-content-center" id="hero-block">
                         <h1 v-html="$t('homeTitle')"></h1>
-                        <h2 v-html="$t('homeParagraph1')"></h2>
+                        <p class="lead" v-html="$t('homeParagraph1')"></p>
+                        <div>
+                            <button type="button" class="btn btn-primary mr-2">Zur Fahrer-App</button>
+                            <button type="button" class="btn btn-success">Zur Checkpoint-App</button>
+                        </div>
                     </div>
-                    <div class="col-lg-6 order-1 order-lg-2 hero-img">
-                        <!--  img src="assets/img/hero-img.png" class="img-fluid animated" alt="" -->
-                        <iframe width="100%" height="100%"
-                                src="https://www.youtube.com/embed/HGfk2suwAlI" loop="1"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
+                    <div class="col-sm-12 col-md-6 col-lg-6 d-flex video-bg">                       
+                         <a id="video-link" href="#" @click.prevent="showVideoModal = !showVideoModal">
+                         <span class="circle d-flex align-items-center justify-content-center">
+                            <i class="fas fa-play"></i>
+                            <span class="circle circle-border"></span> 
+                        </span>          
+                                       
+                        </a>
                     </div>
+                </div>
+                <div class="row mt-5 pt-5">
+                    <div class="col-md-4 home-box">
+                        <h4 class="pr-3" v-html="$t('homeBoxTitle1')"></h4>
+                        <p class="pr-3" v-html="$t('homeBox1')"></p>
+                    </div>
+                    <div class="col-md-4 home-box">
+                        <h4 v-html="$t('homeBoxTitle2')"></h4>
+                        <p v-html="$t('homeBox2')"></p>
+                    </div>
+                    <div class="col-md-4 home-box">
+                        <h4 v-html="$t('homeBoxTitle3')"></h4>
+                        <p v-html="$t('homeBox3')"></p>
+                    </div>
+                </div>
+                <hr />
+                <div class="d-flex align-items-center justify-content-center">
+                    <h2>Ein Projekt des <img src="@/assets/img/wirvsvirus_logo.svg" height="130"/></h2>
+                    
                 </div>
             </div>
         </section>
-        <AboutUs></AboutUs>
+
         <Solution></Solution>
-        <Architecture></Architecture>
-        <Team></Team>
+
+        <AboutUs></AboutUs>
         <Contact></Contact>
+        <VideoModal v-if="showVideoModal" @close="showVideoModal = false"></VideoModal>
     </div>
 </template>
 
+
 <script>
-import AboutUs from "./AboutUs";
 import Solution from "./Solution";
-import Architecture from "./Architecture";
-import Team from "./Team";
+
+import AboutUs from "./AboutUs";
 import Contact from "./Contact";
+import VideoModal from "./VideoModal";
 export default {
   name: 'Home',
   components: {
-      AboutUs,
+      
       Solution,
-      Architecture,
-      Team,
-      Contact
-  }
+      AboutUs,
+      Contact,
+      VideoModal
+  },
+  data() {
+    return {
+        showVideoModal: false
+    }
+  },
 }
 </script>
 
@@ -48,3 +79,5 @@ export default {
 <style scoped>
 
 </style>
+
+

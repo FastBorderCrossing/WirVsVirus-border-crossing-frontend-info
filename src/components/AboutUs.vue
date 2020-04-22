@@ -1,20 +1,29 @@
 <template>
     <div>
-        <section id="about" class="about section-bg">
+        <section id="team" class="py-5">
             <div class="container">
-                <div class="section-title" data-aos="fade-up">
-                    <h2 v-html="$t('aboutTitle')"></h2>
+                <div class="section-title">
+                    <h2 v-html="$t('teamTitle')"></h2>
                 </div>
-                <div class="row content">
-                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
-                        <p v-html="$t('aboutParagraph1')"></p>
-                        <p><i v-html="$t('aboutParagraph2')"></i></p>
-                        <p v-html="$t('aboutParagraph3')"></p>
-                    </div>
-                    <div class="col-lg-6 pt-4 pt-lg-0">
-                        <img src="@/assets/img/winners.svg" alt="" class="img-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p v-html="$t('teamParagraph1')"></p>
                     </div>
                 </div>
+                <div class="row">
+                    
+                    <div class="col-lg-3 col-md-6" v-for="member in team" :key="member.name">
+                        <div class="member" data-aos="fade-up" data-aos-delay="100">
+                            <div class="member-img">
+                                <img src="@/assets/img/team/team.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="member-info">
+                                <h4>{{member.name}}</h4>
+                                <span>{{member.role}}</span>
+                            </div>
+                        </div>
+                </div>
+            </div>
             </div>
         </section>
     </div>
@@ -22,7 +31,58 @@
 
 <script>
     export default {
-        name: "AboutUs"
+        name: "Team",
+        data () {
+            return {
+                team: [
+                    {
+                    'name':'André Sünnemann',
+                    'role':'Backend',
+                    'img':'team.jpg',
+                    },
+                    {
+                    'name':'Ann-Kathrin Kotenbeutel',
+                    'role':'Grafik und Design',
+                    'img':'team.jpg',
+                    },
+                    {
+                    'name':'Christoph Strecker',
+                    'role':'Product Management',
+                    'img':'team.jpg',
+                    },
+                    {
+                    'name':'Ferdinand Martini',
+                    'role':'Frontend',
+                    'img':'team.jpg',
+                    },
+                    {
+                    'name':'Jens Fischer',
+                    'role':'Datenbank',
+                    'img':'team.jpg',
+                    },
+                    {
+                    'name':'Michael Siebers',
+                    'role':'Project Lead',
+                    'img':'team.jpg',
+                    },
+                    {
+                    'name':'Roy Brannath',
+                    'role':'Frontend und Backend',
+                    'img':'team.jpg',
+                    },
+                    {
+                    'name':'Shéhérazade Benzerga',
+                    'role':'Product Managment',
+                    'img':'team.jpg',
+                    },
+                    {
+                    'name':'Timo Schubert',
+                    'role':'Product Managment',
+                    'img':'team.jpg',
+                    }
+                ]
+            }
+        }
     }
 </script>
 

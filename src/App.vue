@@ -1,23 +1,24 @@
 <template>
   <div id="app">
-    <header id="header" class="fixed-top d-flex align-items-center bg-white">
-      <div class="container d-flex align-items-center">
-
+    <header id="header" class="fixed-top bg-white">
+      <div class="container align-items-center">
+<!--
         <div class="logo mr-auto">
-          <!--
+      
           <h1 class="text-light">
               <a href="index.html"><span>Fast&nbsp;Border&nbsp;Crossing</span></a>
           </h1>
-           -->
-          <a href="/"><img src="./assets/fastborderx_logo_mit_text.svg" height="50" alt="" ></a>
+          
+          <a href="/"><img src="./assets/fastborderx_logo_mit_text.svg" height="60" alt="" ></a>
 
         </div>
         <button @click="toggleMobileNav()" v-if="!mobileNav" type="button" class="mobile-nav-toggle d-lg-none">
           <i class="fas fa-bars"></i>
         </button>
-        <nav class="nav-menu d-none d-lg-block">
-        <Navigation @clicked="closeMobileNav()" v-if="!mobileNav"></Navigation>
-        </nav>
+        @clicked="closeMobileNav()" v-if="!mobileNav"
+         -->
+        <Navigation></Navigation>
+
       </div>
     </header>
 
@@ -52,10 +53,6 @@
      <button @click="toggleMobileNav()" v-if="mobileNav" class="mobile-nav-toggle" type="button">
           <i class="fas fa-times text-white"></i>
       </button>
-    <nav v-if="mobileNav" class="mobile-nav d-lg-none">
-      <Navigation @clicked="closeMobileNav()"></Navigation>
-    </nav>
-    <div class="mobile-nav-overly" v-if="mobileNav"></div>
   </div>
 </template>
 
@@ -93,7 +90,8 @@
 </script>
 
 <style>
-  @import './assets/css/main.css';
+  /* @import './assets/scss/main.scss';*/
+  /*@import './assets/css/main.css';*/
   .cursor-pointer {
     cursor: pointer;
   }
