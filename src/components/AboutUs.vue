@@ -1,23 +1,19 @@
 <template>
     <div>
-        <section id="team" class="py-5">
+        <section id="about" class="py-5 background-light-blue">
             <div class="container">
-                <div class="section-title">
-                    <h2 v-html="$t('teamTitle')"></h2>
+                <div class="section-title pb-3">
+                    <h2 v-html="$t('aboutTitle')"></h2>
                 </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <p v-html="$t('teamParagraph1')"></p>
+                <div class="row pb-3">
+                    <div class="col-md-8">
+                        <p v-html="$t('aboutParagraph1')"></p>
                     </div>
                 </div>
                 <div class="row">
-                    
-                    <div class="col-lg-3 col-md-6" v-for="member in team" :key="member.name">
-                        <div class="member" data-aos="fade-up" data-aos-delay="100">
-                            <div class="member-img">
-                                <img src="@/assets/img/team/team.jpg" class="img-fluid" alt="">
-                            </div>
-                            <div class="member-info">
+                    <div class="col-lg-4 col-md-6" v-for="member in team" :key="member.name">
+                        <div class="team-member-box d-flex">
+                            <div class="member-info w-100 justify-content-center align-self-center">
                                 <h4>{{member.name}}</h4>
                                 <span>{{member.role}}</span>
                             </div>
@@ -42,7 +38,7 @@
                     },
                     {
                     'name':'Ann-Kathrin Kotenbeutel',
-                    'role':'Grafik und Design',
+                    'role':'Grafics & Design',
                     'img':'team.jpg',
                     },
                     {
@@ -57,7 +53,7 @@
                     },
                     {
                     'name':'Jens Fischer',
-                    'role':'Datenbank',
+                    'role':'Database',
                     'img':'team.jpg',
                     },
                     {
@@ -67,7 +63,7 @@
                     },
                     {
                     'name':'Roy Brannath',
-                    'role':'Frontend und Backend',
+                    'role':'Frontend & Backend',
                     'img':'team.jpg',
                     },
                     {

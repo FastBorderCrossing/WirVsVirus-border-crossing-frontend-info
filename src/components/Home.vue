@@ -7,8 +7,8 @@
                         <h1 v-html="$t('homeTitle')"></h1>
                         <p class="lead" v-html="$t('homeParagraph1')"></p>
                         <div>
-                            <button type="button" class="btn btn-primary mr-2">Zur Fahrer-App</button>
-                            <button type="button" class="btn btn-success">Zur Checkpoint-App</button>
+                            <button type="button" class="btn btn-primary mr-2" v-html="$t('linkTextDriverApp')"></button>
+                            <button type="button" class="btn btn-success" v-html="$t('linkTextCheckpointApp')"></button>
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-6 d-flex video-bg">                       
@@ -37,14 +37,16 @@
                 </div>
                 <hr />
                 <div class="d-flex align-items-center justify-content-center">
-                    <h2>Ein Projekt des <img src="@/assets/img/wirvsvirus_logo.svg" height="130"/></h2>
+                    <h2><span v-html="$t('projectOf')"></span><img src="@/assets/img/wirvsvirus_logo.svg" height="130"/></h2>
                     
                 </div>
             </div>
         </section>
 
         <Solution></Solution>
-
+        <DriverApp></DriverApp>
+        <CheckpointApp></CheckpointApp>
+        <AdminApp></AdminApp>
         <AboutUs></AboutUs>
         <Contact></Contact>
         <VideoModal v-if="showVideoModal" @close="showVideoModal = false"></VideoModal>
@@ -54,7 +56,9 @@
 
 <script>
 import Solution from "./Solution";
-
+import DriverApp from "./DriverApp";
+import CheckpointApp from "./CheckpointApp";
+import AdminApp from "./AdminApp";
 import AboutUs from "./AboutUs";
 import Contact from "./Contact";
 import VideoModal from "./VideoModal";
@@ -63,6 +67,9 @@ export default {
   components: {
       
       Solution,
+      DriverApp,
+      CheckpointApp,
+      AdminApp,
       AboutUs,
       Contact,
       VideoModal
