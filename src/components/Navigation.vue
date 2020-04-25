@@ -5,7 +5,7 @@
           <a @click="toggleMenu()" class="navbar-toggler mr-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
           </a>
-          <div v-show="showMobileMenu" class="collapse navbar-collapse d-block" id="navbarTogglerDemo02">
+          <div v-if="showMobileMenu" class="collapse navbar-collapse d-block" id="navbarTogglerDemo02">
           <ul class="navbar-nav ml-auto mt-0 pb-2">
             <li class="nav-item" @click="$emit('clicked')"><a class="cursor-pointer nav-link" v-scroll-to="{ el: '#header', offset: -60 }">Home</a></li>
             <li class="dropdown" @click.prevent="showChildren = !showChildren"><a class="cursor-pointer dropdown-toggle nav-link" data-toggle="dropdown">{{ $t('solutionTitle') }}</a>
@@ -60,7 +60,7 @@ Vue.component('dropdownelement', {
           showOverlay: false
       }
     },
-    created: function() {
+    beforeMount: function() {
       if(this.$mq === 'laptop' || this.$mq === 'desktop') {
         this.showMobileMenu = true;
       }
