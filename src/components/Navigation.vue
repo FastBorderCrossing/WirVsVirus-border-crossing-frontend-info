@@ -1,11 +1,12 @@
 <template>
-    <nav class="navbar navbar-expand-lg static-top">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-bars"></i>
-          </button>
-          <div class="collapse navbar-collapse " id="navbarTogglerDemo02">
+    <div>
+    <nav class="navbar navbar-expand-lg container static-top">
           <a class="navbar-brand" href="/"><img src="@/assets/fastborderx_logo_mit_text.svg" height="60" alt="" ></a>
-          <ul class="navbar-nav ml-auto mt-0">
+          <a @click="toggleMenu()" class="navbar-toggler mr-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+          </a>
+          <div v-show="showMobileMenu" class="collapse navbar-collapse d-block" id="navbarTogglerDemo02">
+          <ul class="navbar-nav ml-auto mt-0 pb-2">
             <li class="nav-item" @click="$emit('clicked')"><a class="cursor-pointer nav-link" v-scroll-to="{ el: '#header', offset: -60 }">Home</a></li>
             <li class="dropdown" @click.prevent="showChildren = !showChildren"><a class="cursor-pointer dropdown-toggle nav-link" data-toggle="dropdown">{{ $t('solutionTitle') }}</a>
               <ul class="dropdown-menu d-block" v-if="showChildren">
@@ -22,16 +23,27 @@
           </ul>
           </div>
       </nav>
+      <div v-if="showOverlay" class="mobile-nav-overly"></div>
+      </div>
 </template>
 
 
 <script>
+import VueMq from 'vue-mq'
 import LanguageSwitcher from './LanguageSwitcher.vue'
 import Vue from 'vue';
+Vue.use(VueMq, {
+  breakpoints: {
+    mobile: 450,
+    tablet: 900,
+    laptop: 1250,
+    desktop: Infinity,
+  }
+})
 Vue.component('dropdownelement', {
     data: function() {
         return {
-            showChildren: false
+            showChildren: false,
         }
     }
 })
@@ -43,7 +55,20 @@ Vue.component('dropdownelement', {
     },
     data: function() {
       return {
-          showChildren: false
+          showChildren: false,
+          showMobileMenu: false,
+          showOverlay: false
+      }
+    },
+    created: function() {
+      if(this.$mq === 'laptop' || this.$mq === 'desktop') {
+        this.showMobileMenu = true;
+      }
+    },
+    methods: {
+      toggleMenu: function() {
+        this.showMobileMenu = !this.showMobileMenu
+        this.showOverlay = !this.showOverlay
       }
     }
   }

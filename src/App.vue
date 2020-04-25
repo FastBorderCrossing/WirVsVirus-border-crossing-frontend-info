@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header id="header" class="fixed-top bg-white">
-      <div class="container align-items-center">
+      <div class="align-items-center">
 <!--
         <div class="logo mr-auto">
       

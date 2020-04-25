@@ -7,8 +7,8 @@
                         <h1 v-html="$t('homeTitle')"></h1>
                         <p class="lead" v-html="$t('homeParagraph1')"></p>
                         <div>
-                            <button type="button" class="btn btn-primary mr-2" v-html="$t('linkTextDriverApp')"></button>
-                            <button type="button" class="btn btn-success" v-html="$t('linkTextCheckpointApp')"></button>
+                            <a target="_blank" href="https://driver.fastbordercrossing.org" type="button" class="btn btn-primary mr-2" v-html="$t('linkTextDriverApp')"></a>
+                            <a target="_blank" href="https://checkpoint.fastbordercrossing.org" type="button" class="btn btn-success" v-html="$t('linkTextCheckpointApp')"></a>
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-6 d-flex video-bg">                       
