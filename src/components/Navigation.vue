@@ -7,16 +7,16 @@
           </a>
           <div v-if="showMobileMenu" class="collapse navbar-collapse d-block" id="navbarTogglerDemo02">
           <ul class="navbar-nav ml-auto mt-0 pb-2">
-            <li class="nav-item" @click="$emit('clicked')"><a class="cursor-pointer nav-link" v-scroll-to="{ el: '#header', offset: -60 }">Home</a></li>
+            <li class="nav-item" @click="closeMobileNav"><a class="cursor-pointer nav-link" v-scroll-to="{ el: '#header', offset: -60 }">Home</a></li>
             <li class="dropdown" @click.prevent="showChildren = !showChildren"><a class="cursor-pointer dropdown-toggle nav-link" data-toggle="dropdown">{{ $t('solutionTitle') }}</a>
               <ul class="dropdown-menu d-block" v-if="showChildren">
-                <li class="dropdown-item"><a class="cursor-pointer" v-scroll-to="{ el: '#driver-app', offset: -60 }">{{ $t('driverAppTitle') }}</a></li>
-                <li class="dropdown-item"><a class="cursor-pointer" v-scroll-to="{ el: '#checkpoint-app', offset: -60 }">{{ $t('checkpointAppTitle') }}</a></li>
-                <li class="dropdown-item"><a class="cursor-pointer" v-scroll-to="{ el: '#admin-app', offset: -60 }">{{ $t('adminAppTitle') }}</a></li>
+                <li class="dropdown-item" @click="closeMobileNav"><a class="cursor-pointer" v-scroll-to="{ el: '#driver-app', offset: -60 }">{{ $t('driverAppTitle') }}</a></li>
+                <li class="dropdown-item" @click="closeMobileNav"><a class="cursor-pointer" v-scroll-to="{ el: '#checkpoint-app', offset: -60 }">{{ $t('checkpointAppTitle') }}</a></li>
+                <li class="dropdown-item" @click="closeMobileNav"><a class="cursor-pointer" v-scroll-to="{ el: '#admin-app', offset: -60 }">{{ $t('adminAppTitle') }}</a></li>
               </ul>
             </li>
-            <li class="nav-item" @click="$emit('clicked')"><a class="cursor-pointer nav-link" v-scroll-to="{ el: '#about', offset: -60 }">{{ $t('aboutTitle') }}</a></li>
-            <li class="nav-item" @click="$emit('clicked')"><a class="cursor-pointer nav-link" v-scroll-to="{ el: '#contact', offset: -60 }">{{ $t('contactTitle') }}</a></li>
+            <li class="nav-item" @click="closeMobileNav"><a class="cursor-pointer nav-link" v-scroll-to="{ el: '#about', offset: -60 }">{{ $t('aboutTitle') }}</a></li>
+            <li class="nav-item" @click="closeMobileNav"><a class="cursor-pointer nav-link" v-scroll-to="{ el: '#contact', offset: -60 }">{{ $t('contactTitle') }}</a></li>
             <li>
             <LanguageSwitcher></LanguageSwitcher>
             </li>
@@ -60,12 +60,18 @@ Vue.component('dropdownelement', {
           showOverlay: false
       }
     },
-    beforeMount: function() {
+    mounted: function() {
       if(this.$mq === 'laptop' || this.$mq === 'desktop') {
         this.showMobileMenu = true;
       }
     },
     methods: {
+      closeMobileNav: function() {
+        if(this.$mq != 'laptop' && this.$mq != 'desktop') {
+          this.showMobileMenu = false;
+          this.showOverlay = false;
+        }
+      },
       toggleMenu: function() {
         this.showMobileMenu = !this.showMobileMenu
         this.showOverlay = !this.showOverlay
