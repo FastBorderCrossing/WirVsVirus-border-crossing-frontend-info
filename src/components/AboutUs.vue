@@ -68,12 +68,12 @@
                     },
                     {
                     'name':'Shéhérazade Benzerga',
-                    'role':'Product Managment',
+                    'role':'Product Management',
                     'img':'team.jpg',
                     },
                     {
                     'name':'Timo Schubert',
-                    'role':'Product Managment',
+                    'role':'Product Management',
                     'img':'team.jpg',
                     }
                 ]
